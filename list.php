@@ -5,17 +5,17 @@ $result = mysqli_query($conn,'SELECT * FROM products');
    
 
 ?> <tr>
-    <?php while($row = mysqli_fetch_assoc($result)) ?>
-                                        <td><?php htmlspecialchars($row['id'])?>/td>
+    <?php while($row = mysqli_fetch_assoc($result)){ ?>
+                                        <td><?= $row['id']?>/td>
                                         <td>
-                                            <strong><?php htmlspecialchars($row['name'])?></strong>
+                                            <strong><?= $row['name']?></strong>
                                             <br>
                                             <small class="text-muted"><?php htmlspecialchars($row['description'])?></small>
                                         </td>
-                                        <td class="price"><?php htmlspecialchars($row['price'])?></td>
+                                        <td class="price"><?= htmlspecialchars($row['price'])?></td>
                                         <td>
                                             <span class="stock-ok">
-                                                <i class="bi bi-check-circle"></i> <?php htmlspecialchars($row['quantity'])?>
+                                                <i class="bi bi-check-circle"></i> <?= htmlspecialchars($row['quantity'])?>
                                             </span>
                                         </td>
                                         <td><small>2025-01-15</small></td>
@@ -31,3 +31,5 @@ $result = mysqli_query($conn,'SELECT * FROM products');
                                             </a>
                                         </td>
                                     </tr>
+
+    <?php } ?>
