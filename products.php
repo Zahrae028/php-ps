@@ -17,7 +17,7 @@
 // Votre code ici...
 
 
-
+require_once 'config/db_mysqli.php';
 
 /**
  * ============================================================
@@ -155,7 +155,7 @@
                         <!-- Votre code PHP ici... -->
                         
                         
-                        <form method="POST" action="products.php">
+                        <form method="POST" action="add.php">
                             <!-- ============================================= -->
                             <!-- TODO 7: CHAMP CACHÉ POUR L'ID EN MODE ÉDITION -->
                             <!-- ============================================= -->
@@ -304,6 +304,8 @@
                                             </a>
                                         </td>
                                     </tr>
+
+                                    <?php include 'list.php' ?>
                                     <!-- FIN DE L'EXEMPLE -->
                                     
                                     <!-- Votre boucle PHP ici... -->

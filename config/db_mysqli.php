@@ -12,7 +12,7 @@
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'shop_db';
+$database = 'ps-php';
 
 // Connexion MySQLi (Orienté Objet)
 $conn = new mysqli($host, $username, $password, $database);
